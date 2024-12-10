@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(183, 183, 183);
+}
+nav{
+    background-color: rgb(65, 65, 65);
+    height: 70px;
+    width: 100%;
+}
+label.logo{
+    color: rgba(245, 245, 245, 0.578);
+    font-size: 35px;
+    line-height: 70px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    
+}
+nav ul li{
+    display: inline-block;
+    line-height: 70px;
+
+    
+}
+nav ul li a{
+    display: flex;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+    
+
+}
+a.active, a:hover{
+    background-color: rgb(170, 170, 170);
+}
