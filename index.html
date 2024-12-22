@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="practice.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,24 +12,49 @@
         <ul>
             <li><a href="#">Resume</a></li>
             <li><a href="https://github.com/Timwes21" target="_blank">Github</a></li>
-            <li><a href="#">Linkedin</a></li>
             <li><a href="#">Contact</a></li>
 
 
-            <div class="projects">
-                <div class="project1">
-                    <img src="Main-menu-img.png" alt="picture of batman">
-                    <p>The Batman: Game</p>
-                </div>
-            </div>
             
-
+            
         </ul>
     </nav>
-
-    <div class="batman-game">
-        
-    </div>
+    <hr>
     
+    <div class="projects">
+        <div class="card">
+            <div class="front" id="batman-game"><p>Batman Game</p></div>
+            <div class="back">
+                <h2 class="card-headings">Description</h2>
+                <p class="text">Protect Gotham in this fast-paced 2D action game. Face escalating waves of enemies, each tougher than the last. Battle six unique enemy types with distinct attack styles, using Batman’s skills to survive and restore order.</p>
+                <br>
+                <h2 class="card-headings">Technologies Used:</h2>
+                <p class="Text">Languages: Java</p>
+                <p class="Text">Libraries: Swing</p>
+                
+                <button class="source-code" id="batman-game-button">Source Code</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="front" id="securty-cam"><p>Security Camera (In Development)</p></div>
+            <div class="back">
+                <h2 class="card-headings">Description</h2>
+                <p class="text">Implements Facial Recognition via the opencv library. Returns notifications based on who is visible, and updates the user every 15 minutes if activity is detected.</p>
+                <br>
+                <h2 class="card-headings">Technologies Used</h2>
+                <p class="text">Languages: Python, JavaScript</p>
+                <p class="text">Libraries: OpenCV, FastAPI</p>
+                <button class="source-code" id="security-cam-button">Source Code</button>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <footer>
+        <nav>
+        </nav>
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -4,25 +4,29 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 body{
-    background-color: rgb(183, 183, 183);
+    background: linear-gradient(rgb(0, 0, 0), rgb(100, 100, 100));
 }
 nav{
-    background-color: rgb(65, 65, 65);
+    background-color: rgb(0, 0, 0);
     height: 70px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 label.logo{
     color: rgba(245, 245, 245, 0.578);
     font-size: 35px;
-    line-height: 70px;
-    padding-left: 10px;
-    padding-top: 5px;
+    display: flex;
+    align-self: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 nav ul{
-    float: right;
     margin-right: 20px;
+    justify-self: flex-end;
     
 }
 nav ul li{
@@ -41,4 +45,88 @@ nav ul li a{
 }
 a.active, a:hover{
     background-color: rgb(170, 170, 170);
+}
+hr{
+    background-color: rgb(255, 0, 0);
+}
+.projects{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+    
+    
+}
+.card{
+    width: 250px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    border-radius: 2%;
+    box-shadow: 0px 0px 15px black;
+    
+
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.front{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: blue;
+    color: white;
+    border-radius: inherit;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    
+
+}
+.front p{
+    text-shadow: 2px 2px 5px black;
+    
+}
+.back{
+    position: absolute;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    align-items:center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: inherit;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#batman-game{
+    background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.8)), url("Main-menu-img.png");
+    
+    
+}
+.card-headings{
+    margin-bottom: 10px;
+    color: rgb(125, 99, 255);
+}
+.text{
+    color: aliceblue;
+}
+.source-code{
+    width: 200px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    background-color: aquamarine;
+    justify-content:flex-end;
+    margin-top: 340px;
+    cursor: pointer;
+    justify-self: flex-end;
+    position: absolute;
+    
 }
