@@ -112,7 +112,7 @@ hr{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #batman-game{
-    background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.8)), url("Main-menu-img.png");
+    background: url("images/Main-menu-img.png");
     
     
 }
@@ -167,7 +167,7 @@ section{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.8)), url("Main-menu-img.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.8)), url("images/Main-menu-img.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -228,4 +228,14 @@ section h1{
 #batman-img{
     margin-top: -20px;
 }
+.subheading{
+    color: rgb(255, 255, 108);
+}
 
+#pizza-time-front{
+    background-color: rgba(242, 53, 53, 0.8); /* Colored background */
+    background-image: url('/images/icon.png'); /* Transparent PNG */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+    background-size: cover; /* Scales the image to cover the element */
+}

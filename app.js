@@ -5,5 +5,5 @@ batman_button.addEventListener("click", () => {
 })
 
 camera_button.addEventListener("click", () => {
-    window.location.href = "https://github.com/Timwes21/SecurityCam"
+    window.location.href = "https://github.com/Timwes21/pizza_time"
 })
