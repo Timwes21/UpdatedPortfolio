@@ -75,11 +75,15 @@ hr{
 .card:hover{
     transform: rotateY(180deg);
 }
-.front{
-    position: absolute;
+.front, section, .gameplay{
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.front{
+    position: absolute;
     text-align: center;
     width: 100%;
     height: 100%;
@@ -153,20 +157,19 @@ footer{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    /* background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.8)), url("Main-menu-img.png");
-    background-position:0% 30%;
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 #batman-game-info-body nav a{
     margin: 10px;
     color: rgb(0, 206, 206);
 }
+#pizza-time-front, #spideypedia-front{
+    background-image: url('/images/icon.png'); /* Transparent PNG */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+    background-size: cover; /* Scales the image to cover the element */
+}
 section{
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
     background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.8)), url("images/Main-menu-img.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -176,10 +179,7 @@ section{
     width: 1000px;
 }
 .gameplay{
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
     width: 1000px;
 }
 section h1{
@@ -206,7 +206,6 @@ section h1{
 }
 .controls-listed{
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
 }
@@ -232,10 +231,20 @@ section h1{
     color: rgb(255, 255, 108);
 }
 
+#spideypedia-front{
+    background-image: url('/images/header_bg.jpg'); /* Transparent PNG */
+}
 #pizza-time-front{
     background-color: rgba(242, 53, 53, 0.8); /* Colored background */
-    background-image: url('/images/icon.png'); /* Transparent PNG */
-    background-repeat: no-repeat; /* Prevents tiling */
-    background-position: center; /* Centers the image */
-    background-size: cover; /* Scales the image to cover the element */
+
+}
+.card-title{
+    color: rgb(255, 255, 255);
+}
+.technologies-used{
+    display: flex;
+    flex-direction: row;
+}
+.backend, .frontend{
+    width: 50%;
 }
