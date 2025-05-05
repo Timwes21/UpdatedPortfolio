@@ -69,7 +69,6 @@ hr{
     transition: all 0.5s ease;
     border-radius: 2%;
     box-shadow: 0px 0px 15px black;
-    
 
 }
 .card:hover{
@@ -134,10 +133,13 @@ hr{
     border: 0;
     background-color: aquamarine;
     justify-content:flex-end;
-    margin-top: 340px;
     cursor: pointer;
     justify-self: flex-end;
+    
+}
+.source-code-con{
     position: absolute;
+    margin-top: 330px;
     
 }
 footer{
@@ -247,4 +249,8 @@ section h1{
 }
 .backend, .frontend{
     width: 50%;
+}
+.last-commit{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
