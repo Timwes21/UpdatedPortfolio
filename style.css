@@ -286,11 +286,10 @@ section h1{
     color: white;
     bottom: 50px;
     right: 10px;
-    
     background-color: rgba(0, 0, 0, 0);
     z-index: 90;
     width: 300px;
-    height: 50vh;
+    height: 350px;
     transition: .3s ease;
 }
 .chat.open{
@@ -308,6 +307,8 @@ section h1{
     background-color: black;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+
 }
 .messages{
     display: flex;
@@ -330,6 +331,8 @@ section h1{
     background-color: black;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+
 }
 .reply-to-agent button{
     background-color: rgb(122, 255, 255);
@@ -374,4 +377,22 @@ input{
     transform: translateY(0);
     opacity: 1;
     position: relative;
+}
+.contact-info{
+    position: absolute;
+    color: white;
+    background-color: black;
+    opacity: 0;
+    transition: .2s ease;
+    right: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+.contact-info li{
+    padding: 5px;
+    border: 1px solid white;
+}
+
+.contact-info.open{
+    opacity: 1;
+    z-index: 100;
 }

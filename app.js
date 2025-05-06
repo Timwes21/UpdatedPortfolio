@@ -90,3 +90,10 @@ function addUserMessage(){
         }
     })
 }
+
+
+let contactInfoButton = qs(".contact-info-button")
+let contactInfo = qs(".contact-info")
+contactInfoButton.addEventListener("click", ()=>{
+    contactInfo.classList.toggle("open")
+})
