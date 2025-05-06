@@ -1,11 +1,15 @@
-const qs= (e) => document.querySelector(e);
+const qs = (e) => document.querySelector(e);
+const ce = (e) => document.createElement(e);
 const BATMANGAMEREPO = 'BatmanGame';
 const PIZZATIMEREPO = 'pizza_time';
 const SPIDEYPEDIAREPO = 'spideypedia';
 
-let batmanButton = qs('#batman-game-button')
-let pizzaTimeButton = qs('#pizza-time-button')
-let spideypediaButton = qs("#spideypedia-button")
+let batmanButton = qs('#batman-game-button');
+let pizzaTimeButton = qs('#pizza-time-button');
+let spideypediaButton = qs("#spideypedia-button");
+let toggleChatButton = qs(".chat-button");
+let closeChatButton = qs("#close-chat");
+let messagesDiv = qs(".messages");
 
 
 function goToRepo(button, repo){
@@ -32,3 +36,57 @@ async function getLastCommitDate(project){
 }
 
 
+toggleChatButton.addEventListener("click", ()=>{
+    qs(".chat").classList.toggle("open");
+    toggleChatButton.classList.toggle("close");
+
+})
+
+closeChatButton.addEventListener("click", ()=>{
+    qs(".chat").classList.toggle("open");
+    toggleChatButton.classList.toggle("close");
+
+})
+function addNewMessage(writer, message){
+    let newUserMessage = ce("p");
+    newUserMessage.className = writer + "-message"
+    newUserMessage.innerText = message;
+    messagesDiv.appendChild(newUserMessage);
+    setTimeout(()=>{
+        newUserMessage.classList.toggle("push")
+        
+    }, 50)
+}
+
+const ws = new WebSocket('wss://portfolio-chat-bot-production.up.railway.app/ws');
+ws.onopen = () => {
+    console.log("connected to ws");
+}
+
+
+
+addUserMessage()
+
+ws.onmessage=(event)=>{
+    console.log(event.data);
+    addNewMessage("agent", event.data)
+
+}
+ws.onerror= (err) =>{
+    console.log(err);
+}
+ws.onclose = (event) =>{
+    console.log("ws closed", event);   
+}
+function addUserMessage(){
+    const userInput = qs(".user-input");
+    const userSendButton = qs(".user-send-button");
+    userSendButton.addEventListener("click", ()=>{
+        if (userInput.value.length > 0){
+            addNewMessage("user", userInput.value)
+            ws.send(userInput.value);
+            userInput.value = "";
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+    })
+}
