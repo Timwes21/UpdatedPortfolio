@@ -245,6 +245,10 @@ section h1{
 .technologies-used{
     display: flex;
     flex-direction: row;
+    width: 100%;  
+    flex-wrap: wrap;
+    list-style:disc;
+    
 }
 .backend, .frontend{
     width: 50%;
