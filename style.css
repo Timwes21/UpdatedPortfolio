@@ -57,8 +57,9 @@ hr{
     display: flex;
     justify-content: space-around;
     margin: 50px;
-    height: 75vh;
+    /* height: 75vh; */
     flex-wrap: wrap;
+
     
     
 }
