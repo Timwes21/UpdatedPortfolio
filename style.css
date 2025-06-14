@@ -89,10 +89,13 @@ hr{
     height: 100%;
     backface-visibility: hidden;
     background-color: blue;
-    color: white;
+    color: yellow;
     border-radius: inherit;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5rem;
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+    background-size: cover; /* Scales the image to cover the element */
     
 
 }
@@ -117,8 +120,6 @@ hr{
 }
 #batman-game{
     background: url("images/Main-menu-img.png");
-    
-    
 }
 .card-headings{
     margin-bottom: 10px;
@@ -153,9 +154,6 @@ footer{
     color: azure;
     
 }
-#batman-game-info-body img{
-    /* width: 100px; */
-}
 #batman-game-info-body nav{
     display: flex;
     justify-content:space-between;
@@ -165,11 +163,8 @@ footer{
     margin: 10px;
     color: rgb(0, 206, 206);
 }
-#pizza-time-front, #spideypedia-front{
+#pizza-time-front{
     background-image: url('/images/icon.png'); /* Transparent PNG */
-    background-repeat: no-repeat; /* Prevents tiling */
-    background-position: center; /* Centers the image */
-    background-size: cover; /* Scales the image to cover the element */
 }
 section{
     flex-direction: column;
@@ -177,6 +172,11 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+#spideypedia-mobile-front{
+    background-image: url('/images/spideypedia_mobile_emblem.png'); 
+    background-position: center; 
+    background-size: cover; /* Scales the image to cover the element */
 }
 .break{
     width: 1000px;
@@ -239,10 +239,11 @@ section h1{
 }
 #pizza-time-front{
     background-color: rgba(242, 53, 53, 0.8); /* Colored background */
-
 }
 .card-title{
-    color: rgb(255, 255, 255);
+    color: yellow;
+    -webkit-text-stroke: .5px black;
+
 }
 .technologies-used{
     display: flex;
