@@ -11,7 +11,8 @@
         <label class="logo">Portfolio</label>
         <ul>
             <li><a href="Resume.pdf" target="_blank">Resume</a></li>
-            <li><a href="https://github.com/Timwes21" target="_blank">Github</a></li>
+            <li><a class="github-link" href="https://github.com/Timwes21" target="_blank">GitHub</a></li>
+            <li><a class="linkedin-link" href="https://www.linkedin.com/in/tjwes21/">LinkedIn</a></li>
             <li><a href="#" class="contact-info-button">Contact</a></li>
 
 
@@ -21,9 +22,9 @@
     </nav>
     <hr>
     <ul class="contact-info">
-        <li>Phone Number: 772-621-0972</li>
-        <li>Email: timothy.wesley99@yahoo.com</li>
-        <li>AI Assistant: 772-247-6154</li>
+        <li><span class="contact-heading">Phone Number: </span>772-621-0972</li>
+        <li><span class="contact-heading">Email: </span>timothy.wesley99@yahoo.com</li>
+        <li><span class="contact-heading">AI Assistant: </span>772-247-6154</li>
     </ul>
     <button class="chat-button">Chat with Tim Chat Bot</button>
     <div class="chat open">
@@ -50,14 +51,13 @@
                 <p class="text">Protect Gotham in this fast-paced 2D action game. Face escalating waves of enemies, each tougher than the last. Battle six unique enemy types with distinct attack styles, using Batman’s skills to survive and restore order.</p>
                 <a href="/batman-game-page/batmanGameInfo.html">More Info</a>
                 <br>
-                <h2 class="card-headings">Technologies Used:</h2>
                 <p class="Text"><span class="subheading">Language</span>: Java</p>
                 <p class="Text"><span class="subheading">Library</span>: Swing</p>
                 
                 <div class="source-code-con">
                     <button class="source-code" id="batman-game-button">Source Code</button>
                     <p class="last-commit">
-                        <span class="subheading">Last Commit: </span>
+                        <span class="last-commit-heading">Last Commit: </span>
                         <span id="last-commit-batman-game"></span>
                     </p>
                 </div>
@@ -71,16 +71,22 @@
                 <p class="text">With the click of a button you can order a large pepperoni pizza.</p>
                 <a href="https://chromewebstore.google.com/detail/anlmmcfcdnbjcjdppkgpcgifmelldjfi?utm_source=item-share-cb">Download Extension</a>
                 <br>
-                <h2 class="card-headings">Technologies Used</h2>
-                <h4 class="subheading">Frontend</h4>
-                <p class="text"> JavaScript, Chrome Extension API</p>
-                <br>
-                <h4 class="subheading">Backend</h4>
-                <p class="text">Node.js, Express.js, MongoDB, Unofficial Dominos API, Docker</p>
+                <!-- <h2 class="card-headings">Technologies Used</h2> -->
+                <div class="tech-used">
+                    <hr>
+                    <Span class="subheading">Frontend: </Span><Span>JavaScript, Chrome Extension API</Span>
+                    <br>
+                    <br>
+                    <Span class="subheading">Backend: </Span><Span> Node.js, Express.js, Unofficial Dominos API, Docker</Span>
+                    <br>
+                    <br>
+                    <Span class="subheading">Database: </Span><Span> MongoDB</Span>
+                    <hr>
+                </div>
                 <div class="source-code-con">
                     <button class="source-code" id="pizza-time-button">Source Code</button>
                     <p class="last-commit">
-                        <span class="subheading">Last Commit: </span>
+                        <span class="last-commit-heading">Last Commit: </span>
                         <span id="last-commit-pizza-time"></span>
                     </p>
                 </div>
@@ -93,19 +99,28 @@
                 <h2 class="card-headings">Description</h2>
                 <p class="text">A web application that keeps track of all your comics with the help of an ai agent <a href="http://spideypedia.com">Go to Website</a></p>
                 <br>
-                <h2 class="card-headings">Technologies Used</h2>
-                <h4 class="subheading">Frontend</h4>
-                <p class="text">React + Vite</p>
-                <br>
-                <h4 class="subheading">Backend</h4>
-                <p class="text">Node.js, Express.js, MongoDB, Google/Gemini API</p>
-                <br>
-                <h4 class="subheading">AI-Agent</h4>
-                <p class="text">FastAPI, Langchain/Langgraph</p>
+                <!-- <h2 class="card-headings">Technologies Used</h2> -->
+                <div class="tech-used">
+                    <hr>
+                    <Span class="subheading">Frontend: </Span><Span>JavaScript, React, Vite</Span>
+                    <br>
+                    <br>
+                    <Span class="subheading">Backend: </Span><Span> Node.js, Express.js, MongoDB</Span>
+                    <br>
+                    <br>
+                    <Span class="subheading">Databases: </Span><Span> MongoDB, Redis</Span>
+                    <br>
+                    <br>
+                    <Span class="subheading">AI Agent: </Span><Span> Python, FastAPI, Langchain, Langgraph</Span>
+                    <br>
+                    <br>
+                    <Span class="subheading">CI/DC: </Span><Span> GitHub Actions, Jest, Pytest</Span>
+                    <hr>
+                </div>
                 <div class="source-code-con">
                     <button class="source-code" id="spideypedia-button">Source Code</button>
                     <p class="last-commit">
-                        <span class="subheading">Last Commit: </span>
+                        <span class="last-commit-heading">Last Commit: </span>
                         <span id="last-commit-spideypedia"></span>
                     </p>
                 </div>
@@ -115,15 +130,20 @@
             <div class="front" id="spideypedia-mobile-front"><p class="card-title">Spideypedia Mobile</p></div>
             <div class="back">
                 <h2 class="card-headings">Description</h2>
-                <p class="text">A mobile version of Spideypedia. Added ability to add to your collection by takng a picture.</p>
+                <p class="text">A mobile frontend for Spideypedia. Currently only accessable by becoming a tester. Just email me, and I can send the link.</p>
                 <br>
-                <h2 class="card-headings">Technologies Used</h2>
-                <p class="text">React Native, Expo, TypeScript</p>
-                <br>
+                <div class="tech-used">
+                    <hr>
+                    <Span class="subheading">Frontend: </Span><Span>TypeScript, React-Native, Expo</Span>
+                    <br>
+                    <br>
+                    <Span class="subheading">CI/DC: </Span><Span> GitHub Actions, Expo</Span>
+                    <hr>
+                </div>
                 <div class="source-code-con">
                     <button class="source-code" id="spideypedia-mobile-button">Source Code</button>
                     <p class="last-commit">
-                        <span class="subheading">Last Commit: </span>
+                        <span class="last-commit-heading">Last Commit: </span>
                         <span id="last-commit-spideypedia-mobile"></span>
                     </p>
                 </div>
