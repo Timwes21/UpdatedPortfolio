@@ -16,9 +16,12 @@
 }
 body{
     background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(100, 100, 100));
-    min-height:100vh;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+
 }
 nav{
     background-color: rgb(0, 0, 0);
@@ -26,6 +29,11 @@ nav{
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+footer{
+    height: 70px;
+    background-color: black;
+    /* justify-self: flex-end; */
 }
 .my-links{
     display: flex;
@@ -77,6 +85,7 @@ hr{
     display: flex;
     justify-content:space-around;
     margin: 50px;
+    height: 75vh;
     flex-wrap: wrap;
 }
 .card{
@@ -159,11 +168,6 @@ hr{
     position: absolute;
     margin-top: 330px;
     
-}
-footer{
-    height: 70px;
-    bottom: 0;
-    background-color: black;
 }
 /* Batman Game page  */
 #batman-game-info-body{
