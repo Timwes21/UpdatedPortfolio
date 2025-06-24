@@ -4,11 +4,13 @@ const BATMANGAMEREPO = 'BatmanGame';
 const PIZZATIMEREPO = 'pizza_time';
 const SPIDEYPEDIAREPO = 'spideypedia';
 const SPIDEYPEDIAMOBILEREPO = 'spideypedia_mobile'
+const WORKNUMBERREPO = "Work_Phone"
 
 let batmanButton = qs('#batman-game-button');
 let pizzaTimeButton = qs('#pizza-time-button');
 let spideypediaButton = qs("#spideypedia-button");
 let spideypediaMobileButton = qs("#spideypedia-mobile-button");
+let workNumberButton = qs("#work-number-button")
 let toggleChatButton = qs(".chat-button");
 let closeChatButton = qs("#close-chat");
 let messagesDiv = qs(".messages");
@@ -19,17 +21,26 @@ function goToRepo(button, repo){
         window.location.href = "https://github.com/Timwes21/" + repo;
     })
 }
+
+async function getLastCommit(tag, repo){
+    qs(`#last-commit-${tag}`).innerText = await getLastCommitDate(repo);
+}
+
+
+
 goToRepo(batmanButton, BATMANGAMEREPO);
 goToRepo(pizzaTimeButton, PIZZATIMEREPO);
 goToRepo(spideypediaButton, SPIDEYPEDIAREPO);
 goToRepo(spideypediaMobileButton, SPIDEYPEDIAMOBILEREPO);
+goToRepo(workNumberButton, WORKNUMBERREPO);
 
 
 (async function(){
-    qs("#last-commit-spideypedia-mobile").innerText = await getLastCommitDate(SPIDEYPEDIAMOBILEREPO);
-    qs("#last-commit-spideypedia").innerText = await getLastCommitDate(SPIDEYPEDIAREPO);
-    qs("#last-commit-pizza-time").innerText = await getLastCommitDate(PIZZATIMEREPO);
-    qs("#last-commit-batman-game").innerText = await getLastCommitDate(BATMANGAMEREPO);
+    await getLastCommit("spideypedia-mobile", SPIDEYPEDIAMOBILEREPO)
+    await getLastCommit("pizza-time", PIZZATIMEREPO)
+    await getLastCommit("spideypedia", SPIDEYPEDIAMOBILEREPO)
+    await getLastCommit("batman-game", BATMANGAMEREPO)
+    await getLastCommit("work-number", WORKNUMBERREPO)
 })();
 
 async function getLastCommitDate(project){
@@ -49,7 +60,6 @@ toggleChatButton.addEventListener("click", ()=>{
 closeChatButton.addEventListener("click", ()=>{
     qs(".chat").classList.toggle("open");
     toggleChatButton.classList.toggle("close");
-
 })
 function addNewMessage(writer, message){
     let newUserMessage = ce("p");
