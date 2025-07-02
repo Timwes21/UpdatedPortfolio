@@ -13,52 +13,57 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body{
     background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(100, 100, 100));
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    /* justify-content: space-between; */
+    /* min-height: 100vh; */
 
 }
 nav{
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.591);
     height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 footer{
     height: 70px;
     background-color: rgb(0, 0, 0);
     width: 100%;
 }
-.my-links{
-    display: flex;
-    overflow: auto;
-}
 label.logo{
-    color: rgba(245, 245, 245, 0.578);
-    font-size: 2em;
-    display: flex;
-    align-self: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+  color: rgba(245, 245, 245, 0.578);
+  font-size: 2em;
+  display: flex;
+  align-self: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
 }
-nav ul{
+.my-links{
+  display: flex;
+  overflow: auto;
     margin-right: 20px;
     justify-self: flex-end;
     gap: 10px;
+    align-items: center;
     
     
 }
-nav ul li{
+.my-links ul li{
     display: inline-block;
     line-height: 70px;
 }
-nav ul li a{
+.my-links ul li a{
     display: flex;
     color: white;
     padding-left: 5px;
@@ -69,17 +74,18 @@ a.active, a:hover{
 hr{
     background-color: rgb(255, 0, 0);
 }
-.github-link{
-    background: url("./images/github-mark.png");
+.link img{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    width: 60px;
+    transition: .3s ease;
 }
-.linkedin-link{
-    background: url("./images/linkedin-logo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+.link img:hover{
+    background-color: rgba(240, 248, 255, 0.163);
+}
+.link:hover{
+    background-color: rgba(240, 248, 255, 0);
 }
 .projects{
     display: flex;
@@ -146,38 +152,41 @@ hr{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-#batman-game{
-    background: url("images/Main-menu-img.png");
+#batman-game-front{
+    background: url("./assets/Main-menu-img.png");
 }
 .card-headings{
     margin-bottom: 10px;
     color: rgb(125, 99, 255);
 }
+.back-contents{
+  overflow:scroll;
+  flex: 1;
+  box-shadow: inset 0 10px 8px -8px rgba(0, 0, 0, 0.3);
+}
 .text{
     color: aliceblue;
 }
 .source-code{
-    width: 200px;
-    height: 50px;
     border-radius: 50%;
     border: 0;
     background-color: aquamarine;
     justify-content:flex-end;
     cursor: pointer;
     justify-self: flex-end;
+    padding: 5px;
     
 }
 .source-code-con{
-    position: absolute;
-    margin-top: 330px;
-    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
 }
-/* Batman Game page  */
 #batman-game-info-body{
     background: linear-gradient(rgb(0, 0, 0), rgb(100, 100, 100));
     height: 100vh;
     color: azure;
-    
 }
 #batman-game-info-body nav{
     display: flex;
@@ -189,17 +198,17 @@ hr{
     color: rgb(0, 206, 206);
 }
 #pizza-time-front{
-    background-image: url('/images/icon.png'); /* Transparent PNG */
+    background-image: url('./assets/icon.png'); /* Transparent PNG */
 }
 section{
     flex-direction: column;
-    background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.8)), url("images/Main-menu-img.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.8)), url("./assets/Main-menu-img.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 #spideypedia-mobile-front{
-    background-image: url('/images/spideypedia_mobile_emblem.png'); 
+    background-image: url('./assets/spideypedia_mobile_emblem.png'); 
     background-position: center; 
     background-size: cover; /* Scales the image to cover the element */
 }
@@ -264,7 +273,7 @@ section h1{
 }
 
 #spideypedia-front{
-    background-image: url('/images/header_bg.jpg'); /* Transparent PNG */
+    background-image: url('./assets/header_bg.jpg'); /* Transparent PNG */
 }
 #pizza-time-front{
     background-color: rgba(242, 53, 53, 0.8); /* Colored background */
@@ -278,6 +287,7 @@ section h1{
     flex-direction: column;
     text-align: left;
     background-color: rgb(35, 35, 35);
+    margin: 10px;
     
 }
 .backend, .frontend{
@@ -342,7 +352,22 @@ section h1{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     box-shadow: 0px 0px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+.chat-header h3{
+    justify-self: center;
+}
+#close-chat{
+    background-color: rgba(240, 248, 255, 0);
+    position: absolute;
+    color: aliceblue;
+    border: 0;
+    cursor: pointer;
+    right: 0;
+    
 }
 .messages{
     display: flex;
@@ -370,6 +395,7 @@ section h1{
 }
 .reply-to-agent button{
     background-color: rgb(122, 255, 255);
+    color: black;
     border-radius: 10px;
     border: 0;
     padding: 5px;
@@ -377,16 +403,9 @@ section h1{
 input{
     border: 0;
     border-radius: 10px;
+    width: 70%;
 }
-#close-chat{
-    position: absolute;
-    right: 0;
-    top: 5px;
-    background-color: rgba(240, 248, 255, 0);
-    color: aliceblue;
-    border: 0;
-    cursor: pointer;
-}
+
 .agent-message, .user-message{
     opacity: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -413,7 +432,7 @@ input{
     position: relative;
 }
 .contact-info{
-    position: absolute;
+    position: fixed;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     opacity: 0;
@@ -434,4 +453,85 @@ input{
 }
 .contact-heading{
     color: var(--highlighter-blue);
+}
+.page-changers{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 10px;
+}
+.page-changer{
+  border-bottom: 0;
+  transition: .1s ease;
+  color: white;
+}
+.page-changer:hover{
+  background-color: rgba(240, 248, 255, 0);
+  color: grey;
+}
+.page-changer.open{
+  border-bottom: 2px solid var(--highlighter-blue);
+}
+.batman-title{
+  text-shadow: 2px 2px 0px rgb(0, 0, 0);
+  color: rgb(255, 0, 0);
+}
+.batman-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(170, 0, 0));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+#batman-screenshot{
+  width: 80%;
+}
+.batman-game-description{
+}
+
+.controls{
+  backdrop-filter: blur(10px);
+  
+  border-radius: 10px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 10px black;
+  background-color: rgba(255, 255, 255, 0.242);
+}
+.control-list{
+  background-color: rgba(255, 255, 255, 0.136);
+  backdrop-filter: blur(10px);
+  width: 80%;
+  margin-bottom: 25px;
+}
+.batman-game-intro{
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  
+}
+.batman-intro-text{
+  width: 50%;
+}
+.download-button-con{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-info-button{
+    cursor: pointer;
+}
+.contact-info-button:hover{
+    background-color: rgba(20, 91, 153, 0);
 }
