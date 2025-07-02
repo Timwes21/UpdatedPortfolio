@@ -3,7 +3,7 @@ import gameScreenshot from "../assets/batman-page/gameplay1.png";
 
 export default function BatmanGamePage(){
     const download = () => {
-        window.open("BatmanGame-1.0.exe")
+        window.open("/BatmanGame-1.0.exe")
     }
     return (
         <div className="batman-page">
