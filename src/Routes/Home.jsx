@@ -22,7 +22,7 @@ export default function Home(){
 
                 <h1 className="home-title">Tim the tool man</h1>
                 <div className="short-description">
-                    <p>Full Stack + AI Developer from Port St. Lucie, Florida</p>
+                    <p>Full Stack + AI Developer from Port St. Lucie, Florida, USA</p>
                     <p>I enjoy building Full Stack Applications that automate tasks with AI</p>
                 </div>
                 <br />
