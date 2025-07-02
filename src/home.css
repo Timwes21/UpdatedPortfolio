@@ -136,3 +136,8 @@
 .emblem{
     width: 30px;
 }
+#download-game-a{
+    background-color: rgb(160, 21, 21);
+    flex: 1;
+    display: flex;
+}
