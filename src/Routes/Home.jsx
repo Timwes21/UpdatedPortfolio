@@ -7,6 +7,7 @@ import NavBar from "../components/NavBar";
 import Skills from "../components/Skills";
 import { ChatContext } from "../context/chatContext";
 
+
 export default function Home(){
     const [ tab, setTab ] = useState("Skills");
     const { chatOpen, setChatOpen } = useContext(ChatContext);
