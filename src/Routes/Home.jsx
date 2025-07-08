@@ -24,7 +24,7 @@ export default function Home(){
                 <h1 className="home-title">Tim the tool man</h1>
                 <div className="home-text">
                     <p>Full Stack + AI Developer from Port St. Lucie, Florida, USA</p>
-                    <p>I enjoy building Full Stack Applications that automate tasks with AI</p>
+                    <p>I build Full Stack Applications that integrate AI Agents</p>
                 </div>
                 <br />
                 <ul className="my-links">
