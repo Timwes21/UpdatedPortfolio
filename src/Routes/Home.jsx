@@ -22,7 +22,7 @@ export default function Home(){
             <div className="home-contents">
 
                 <h1 className="home-title">Tim the tool man</h1>
-                <div className="short-description">
+                <div className="home-text">
                     <p>Full Stack + AI Developer from Port St. Lucie, Florida, USA</p>
                     <p>I enjoy building Full Stack Applications that automate tasks with AI</p>
                 </div>
@@ -34,7 +34,7 @@ export default function Home(){
                 </ul>
                 <br />
                 <div className="know-more">
-                    <p>Wanna Know More?</p>
+                    <p className="home-text">Wanna Know More?</p>
                     <button onClick={()=>setChatOpen(true)}>Ask The Chat Bot</button>
                 </div>
                 <br />

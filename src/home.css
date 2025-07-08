@@ -14,7 +14,7 @@
 .home-title{
     color: rgb(255, 255, 255);
     stroke-width: 10px;
-    text-shadow: 1px 1px 0px rgb(0, 98, 255);
+    text-shadow: 1.5px 1.5px 0px rgb(0, 136, 178);
 }
 .home-contents {
   margin: 0 auto;      
@@ -26,8 +26,9 @@
   justify-content: center;
   /* gap: 10px;    */
 }
-.short-description{
-    /* color: ; */
+.home-text{
+    /* color: rgb(107, 107, 215); */
+    color: rgb(110, 141, 208);
 }
 .contacts-home{
     display: flex;

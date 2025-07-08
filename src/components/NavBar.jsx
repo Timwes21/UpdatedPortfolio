@@ -34,7 +34,6 @@ export default function NavBar({page}){
     <ul className={`contact-info ${infoOpen? "open": ""}`}>
         <li><span className="contact-heading">Phone Number: </span>772-621-0972</li>
         <li><span className="contact-heading">Email: </span>timothy.wesley99@yahoo.com</li>
-        <li><span className="contact-heading">AI Assistant: </span>772-247-6154</li>
     </ul>
     </>
     )
