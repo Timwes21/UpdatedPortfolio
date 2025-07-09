@@ -6,8 +6,8 @@ export default function Projects(){
         name: "",
         file: ""
     });
-    const [sent, setSent] = useState();
-    const [message, setMessage] = useState("");
+    const [ sent, setSent ] = useState();
+    const [ message, setMessage ] = useState("");
     const sendTestInfo = () => {
         const formData = new FormData();
         for (const [key, value] of Object.entries(form)){
@@ -15,12 +15,14 @@ export default function Projects(){
                 formData.append(key, value)
             }
             else{
-                console.log("is undefind", key);
+                setMessage("Must provide both name and file")
                 return;
             }
         }
         setMessage("Loading...")
-        fetch("https://backend-production-8368.up.railway.app/portfolio/test", {
+        const developing = false;
+        const base = developing? "http://127.0.0.1:5050": "https://backend-production-8368.up.railway.app";
+        fetch(base + "/portfolio/test", {
             method: "POST",
             body: formData
         })
