@@ -9,24 +9,18 @@ export default function Projects(){
     const [sent, setSent] = useState();
     const [message, setMessage] = useState("");
     const sendTestInfo = () => {
-        console.log(form);
-        
         const formData = new FormData();
         for (const [key, value] of Object.entries(form)){
-            console.log(key + ":" + value);
-            
             if (value){
                 formData.append(key, value)
             }
             else{
                 console.log("is undefind", key);
-                
                 return;
             }
         }
         setMessage("Loading...")
-        console.log('here');
-        fetch("https://backend-production-8368.up.railway.app/portfolio/test", {
+        fetch("http://backend-production-8368.up.railway.app/portfolio/test", {
             method: "POST",
             body: formData
         })
