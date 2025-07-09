@@ -20,7 +20,7 @@ export default function Projects(){
             }
         }
         setMessage("Loading...")
-        fetch("http://backend-production-8368.up.railway.app/portfolio/test", {
+        fetch("https://backend-production-8368.up.railway.app/portfolio/test", {
             method: "POST",
             body: formData
         })
@@ -28,7 +28,6 @@ export default function Projects(){
             console.log(response);
             
             if (response.status === 200){
-                console.log("status");
                 
                 setSent(true)
             }
@@ -36,7 +35,6 @@ export default function Projects(){
     }
 
     const setFormContent = (key, value) => {
-        console.log("value", value);
         
         setForm(prev=>({
             ...prev,
