@@ -75,7 +75,8 @@ export default function Projects(){
         tag: "work-number",
         repo: "Work_Phone",
         description: "A phone number with twilio that routes to your number, and an AI assistant if you don't pick up. The assistant can schedule a callback, pass a message, and access documents for reference.",
-        test: workNumberTest
+        test: workNumberTest,
+        link: "https://workphone-production.up.railway.app/"
     }
 
 
