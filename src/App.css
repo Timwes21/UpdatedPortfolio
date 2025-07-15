@@ -43,7 +43,7 @@ footer{
 }
 label.logo{
   color: rgba(245, 245, 245, 0.578);
-  font-size: 2.5em;
+  font-size: 2em;
   /* position: absolute; */
   display: flex;
   align-self: center;

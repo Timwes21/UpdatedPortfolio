@@ -21,7 +21,7 @@ export default function Home(){
             <NavBar page={"home"}/>
             <div className="home-contents">
 
-                <h1 className="home-title">Tim the tool man</h1>
+                <h1 className="home-title">Timothy Wesley</h1>
                 <div className="home-text">
                     <p>Full Stack + AI Developer from Port St. Lucie, Florida, USA</p>
                     <p>I build Full Stack Applications that integrate AI Agents</p>
