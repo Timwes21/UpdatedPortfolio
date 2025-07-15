@@ -48,8 +48,8 @@ export default function Skills(){
     ]
 
     return (
-        <div className="qualification-content">
-            <div><span className="skills-header">Languages</span>: 
+        <div className="tech-used">
+            <div className="skill-block"><span className="skills-header">Languages</span>
                 <ul className="skills">
                     {languages.map(([emblem, value])=>(
                         skill(emblem, value)                        
@@ -57,8 +57,7 @@ export default function Skills(){
                     
                 </ul>
             </div>
-            <div><span className="skills-header">Libraries/Frameworks</span>: 
-                <br />
+            <div className="skill-block"><span className="skills-header">Libraries/Frameworks</span>
                 <ul className="skills">
                     {libraries.map(([emblem, value])=>(
                         skill(emblem, value)                        
@@ -66,7 +65,7 @@ export default function Skills(){
                 </ul>
 
             </div>
-            <div>
+            <div className="skill-block">
                 <span className="skills-header">Databases</span>
                 <ul className="skills">
                     {databases.map(([emblem, value])=>(
@@ -75,7 +74,7 @@ export default function Skills(){
 
                 </ul>
             </div>
-            <div><span className="skills-header">Testing/CICD</span>
+            <div className="skill-block"><span className="skills-header">Testing/CICD</span>
                 <ul className="skills">
                     {testing.map(([emblem, value])=>(
                         skill(emblem, value)                        

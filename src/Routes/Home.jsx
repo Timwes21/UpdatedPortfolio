@@ -31,25 +31,19 @@ export default function Home(){
                     <button id="resume-button"><a href="Resume.pdf" target="_blank"><img id="paper-img" src={paperpng} alt="" /><span>Resume</span></a></button>
                     <li><a className="link" href="https://github.com/Timwes21/" target="_blank"><img src={githubPhoto} alt="github logo photo" /></a></li>
                     <li><a className="link" href="https://www.linkedin.com/in/tjwes21/" target="_blank"><img src={linkedinPhoto} alt="" /></a></li>
+                    {/* <li>
+
+                        <div className="know-more">
+                            <p className="home-text">Wanna Know More?</p>
+                            <button onClick={()=>setChatOpen(true)}>Ask The Chat Bot</button>
+                        </div>
+                    </li> */}
                 </ul>
                 <br />
-                <div className="know-more">
-                    <p className="home-text">Wanna Know More?</p>
-                    <button onClick={()=>setChatOpen(true)}>Ask The Chat Bot</button>
-                </div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <div className="qualifications">
-                    <div className="qualification-headers">
-                        <p className={`qualification-header ${tab === "Skills" && "clicked"}`} onClick={()=>setTab("Skills")}>Skills</p>
-                        <p className={`qualification-header ${tab === "Educations" && "clicked"}`} onClick={()=>setTab("Educations")}>Education</p>
-                    </div>
-                    <br />
-                    {tab === "Educations" && <Education/>}
-                    {tab === "Skills" && <Skills/>}
-                </div>
+                <Skills/>
+    
+                    {/* {tab === "Educations" && <Education/>} */}
+                    {/* {tab === "Skills" && <Skills/>} */}
             </div>
         </div>
     )

@@ -43,7 +43,8 @@ footer{
 }
 label.logo{
   color: rgba(245, 245, 245, 0.578);
-  font-size: 2em;
+  font-size: 2.5em;
+  /* position: absolute; */
   display: flex;
   align-self: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -463,6 +464,7 @@ input{
   border-bottom: 0;
   transition: .1s ease;
   color: white;
+  font-size: 1.5rem;
 }
 .page-changer:hover{
   background-color: rgba(240, 248, 255, 0);

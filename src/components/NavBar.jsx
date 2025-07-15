@@ -22,7 +22,7 @@ export default function NavBar({page}){
     return (
     <>
     <nav>
-        <label className="logo">Portfolio</label>
+        <label className="logo">Timothy Wesley</label>
         <div className="page-changers">
             <Link to={"/"} className={`page-changer ${homeOpen && "open"}`}>Home</Link>
             <Link to={"/projects"} className={`page-changer ${projectsOpen && "open"}`}>Projects</Link>
