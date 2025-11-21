@@ -1,6 +1,7 @@
 import pythonPng from "../assets/python.png";
 import javascriptPng from "../assets/javascript.png";
 import javaPng from "../assets/java.png";
+import rustPng from "../assets/rust.png";
 import reactPng from "../assets/react.png"
 import expressPng from "../assets/express.png"
 import fastapiPng from "../assets/fastapi.png"
@@ -23,13 +24,13 @@ export default function Skills(){
     const languages = [
         [pythonPng, "Python"],
         [javascriptPng, "JavaScript"],
-        [javaPng, "Java"]
+        [rustPng, "Rust"]
     ]
 
     const libraries = [
         [reactPng, "React"],
         [reactPng, "React Native"],
-        [expressPng, "Express"],
+        [rustPng, "Axum"],
         [fastapiPng, "FastAPI"],
         [langchainPng, "LangChain"],
         [langgraph, "LangGraph"]
@@ -48,8 +49,8 @@ export default function Skills(){
     ]
 
     return (
-        <div className="tech-used">
-            <div className="skill-block"><span className="skills-header">Languages</span>
+        <div className="qualification-content">
+            <div><span className="skills-header">Languages</span>: 
                 <ul className="skills">
                     {languages.map(([emblem, value])=>(
                         skill(emblem, value)                        
@@ -57,7 +58,8 @@ export default function Skills(){
                     
                 </ul>
             </div>
-            <div className="skill-block"><span className="skills-header">Libraries/Frameworks</span>
+            <div><span className="skills-header">Libraries/Frameworks</span>: 
+                <br />
                 <ul className="skills">
                     {libraries.map(([emblem, value])=>(
                         skill(emblem, value)                        
@@ -65,7 +67,7 @@ export default function Skills(){
                 </ul>
 
             </div>
-            <div className="skill-block">
+            <div>
                 <span className="skills-header">Databases</span>
                 <ul className="skills">
                     {databases.map(([emblem, value])=>(
@@ -74,7 +76,7 @@ export default function Skills(){
 
                 </ul>
             </div>
-            <div className="skill-block"><span className="skills-header">Testing/CICD</span>
+            <div><span className="skills-header">Testing/CICD</span>
                 <ul className="skills">
                     {testing.map(([emblem, value])=>(
                         skill(emblem, value)                        

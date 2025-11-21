@@ -73,10 +73,10 @@ export default function Projects(){
     const workNumberInfo = {
         title: "Work Number",
         tag: "work-number",
-        repo: "Work_Phone",
+        repo: "WorkPhoneApp",
         description: "A phone number with twilio that routes to your number, and an AI assistant if you don't pick up. The assistant can schedule a callback, pass a message, and access documents for reference.",
         test: workNumberTest,
-        link: "https://workphone-production.up.railway.app/"
+        link: "https://workphone.it.com"
     }
 
 
