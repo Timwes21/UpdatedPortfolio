@@ -4,7 +4,8 @@
 }
 
 :root{
-    --highlighter-blue: rgb(122, 255, 255)
+    --highlighter-blue: rgb(122, 255, 255);
+    --background-blue: rgb(23, 83, 132);
 } 
 
 *{
@@ -29,7 +30,8 @@ body{
 nav{
     background-color: rgba(0, 0, 0, 0.591);
     height: 70px;
-    width: 100%;
+    width: 100vw;
+
     display: flex;
     justify-content: space-between;
     position: sticky;
@@ -136,7 +138,6 @@ hr{
 }
 .front p{
     text-shadow: 2px 2px 5px black;
-    
 }
 .back{
     position: absolute;
@@ -161,7 +162,7 @@ hr{
     color: rgb(125, 99, 255);
 }
 .back-contents{
-  overflow:auto;
+  overflow: auto;
   flex: 1;
   box-shadow: inset 0 10px 8px -8px rgba(0, 0, 0, 0.3);
 }
@@ -435,13 +436,13 @@ input{
     position: fixed;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
+    background: bl;
     opacity: 0;
     transition: .4s ease;
     right: 0;
     top: 70px;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
-    border-radius: 10px;
-    border: 1px solid white;
+    border: 1px solid var(--background-blue);
     z-index: 100;
 }
 .contact-info li{
@@ -450,9 +451,6 @@ input{
 
 .contact-info.open{
     opacity: 1;
-}
-.contact-heading{
-    color: var(--highlighter-blue);
 }
 .page-changers{
   display: flex;

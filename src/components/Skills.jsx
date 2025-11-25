@@ -1,9 +1,7 @@
 import pythonPng from "../assets/python.png";
 import javascriptPng from "../assets/javascript.png";
-import javaPng from "../assets/java.png";
 import rustPng from "../assets/rust.png";
 import reactPng from "../assets/react.png"
-import expressPng from "../assets/express.png"
 import fastapiPng from "../assets/fastapi.png"
 import mongodbPng from "../assets/mongodb.png"
 import redisPng from "../assets/redis.png"
@@ -18,7 +16,10 @@ import githubPng from "../assets/github-mark.png"
 export default function Skills(){
 
     const skill = (emblem, title) => {
-        return <li key={title} className="skill"><img className="emblem" src={emblem} alt="" /><span>{title}</span></li>
+        return  <li key={title} className="skill">
+                    <img className="emblem" src={emblem} alt="" />
+                    <span className="skill-name">{title}</span>
+                </li>
     }
 
     const languages = [
@@ -48,43 +49,26 @@ export default function Skills(){
         [githubPng, "GitHub Actions"]
     ]
 
+    const listSkills = (skillsList, skillName) => {
+        return (
+            <div>
+                <span className="skills-header">{skillName}</span>: 
+                <ul className="skills">
+                    {skillsList.map(([emblem, value])=>(
+                        skill(emblem, value)            
+                    ))}
+                    
+                </ul>
+            </div>
+        )
+    }
+
     return (
         <div className="qualification-content">
-            <div><span className="skills-header">Languages</span>: 
-                <ul className="skills">
-                    {languages.map(([emblem, value])=>(
-                        skill(emblem, value)                        
-                    ))}
-                    
-                </ul>
-            </div>
-            <div><span className="skills-header">Libraries/Frameworks</span>: 
-                <br />
-                <ul className="skills">
-                    {libraries.map(([emblem, value])=>(
-                        skill(emblem, value)                        
-                    ))}
-                </ul>
-
-            </div>
-            <div>
-                <span className="skills-header">Databases</span>
-                <ul className="skills">
-                    {databases.map(([emblem, value])=>(
-                        skill(emblem, value)                        
-                    ))}
-
-                </ul>
-            </div>
-            <div><span className="skills-header">Testing/CICD</span>
-                <ul className="skills">
-                    {testing.map(([emblem, value])=>(
-                        skill(emblem, value)                        
-                    ))}
-                </ul>
-                    
-            
-            </div>
+            {listSkills(languages, "Languages")}
+            {listSkills(libraries, "Libraries/Frameworks")}
+            {listSkills(databases, "Databases")}
+            {listSkills(testing, "Testing/CICD")}
         </div>
     )
 
